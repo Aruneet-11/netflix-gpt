@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './Header'
 import { useState,useRef } from 'react';
 import {checkValidateData} from '../utils/Validate';
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../utils/firebase'; 
 const Login = () => {
   const [isSignInForm,setSignInForm]=useState(true);
   const [errmsg,setErrmsg]=useState(null);
@@ -11,14 +13,48 @@ const Login = () => {
   const name=useRef(null);
   const handleButtonClick=()=>{ 
     //Validate the form data.
-    const msg=checkValidateData(name.current.value,email.current.value,password.current.value);
+    console.log(name?.current?.value);
+    console.log(email?.current?.value);
+    console.log(password?.current?.value);
+    const msg=checkValidateData(name?.current?.value,email?.current?.value,password?.current?.value);
     setErrmsg(msg);
     //if this is valid then I can proceed with signin/signup.
-  }
+    if(msg) return; //if msg is not null then we can return and show the error message.
+    if(!isSignInForm){
+      //For SignUp
+      createUserWithEmailAndPassword(auth, email?.current?.value, password?.current?.value)
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrmsg(errorCode+" : "+errorMessage);
+      });
+    }
+    else{
+      //signin logic
+      signInWithEmailAndPassword(auth, email?.current?.value, password?.current?.value)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user);
+  
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrmsg(errorCode+" : "+errorMessage);
+  });
 
+    }
+  }
   const toggleSignInForm=()=>{
     setSignInForm(!isSignInForm);
   }
+
   return (
     <div >
     <Header/>
@@ -36,6 +72,7 @@ const Login = () => {
     </form>
     </div>
   )
+
 }
 
-export default Login
+export default Login;

@@ -13,6 +13,9 @@
 11.Building the Authentication.-- for building the authetication we need backend and for that we will use firebase.(Firebase Setup)
 12.Deploying our app to production.
 13.SignUp user account.
+14.Implement SignIn using API.
+15.Created Redux Store withe userSlice.
+
 #Features of our app
 -Login/Signup page
 -contains signin/signup form

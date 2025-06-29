@@ -28,7 +28,7 @@ const Body = () => {
        //SignIn and SignUp 
         const {uid,email,displayName} = user;
         // Dispatch an action to update the user state in Redux store
-        dispatch(addUser({uid: uid, email: email, displayName: displayName  }));
+        dispatch(addUser({uid: uid, email: email, displayName: displayName}));
  
        
       } else {

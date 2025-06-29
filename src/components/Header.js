@@ -4,8 +4,10 @@ import userIcon from '../utils/images/user-icon.jpg';
 import { signOut } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Header = () => {
   const navigate=useNavigate();
+  const user=useSelector(store=>store.user);
   const handleSignOut=()=>{
     signOut(auth).then(() => {
       // Sign-out successful.
@@ -18,10 +20,11 @@ const Header = () => {
   return (
     <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between">
     <img  className="w-44" src={logo} alt="logo"/>
-    <div className="flex m-4">
+    {user &&<div className="flex m-4">
       <img alt="userIcon" src={userIcon} className="w-12 h-12 m-2"/>
+      {user && <p className="text-white m-2">{user.displayName}</p>}
       <button className="text-white p-2 m-2 font-bold" onClick={handleSignOut}>Sign out</button>
-    </div>
+    </div>}
     </div>
   )
 }

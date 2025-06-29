@@ -15,7 +15,9 @@
 13.SignUp user account.
 14.Implement SignIn using API.
 15.Created Redux Store withe userSlice.
-
+16.Implemented signout
+17.Update profile api call
+18.Fetch data from TMDB movie.
 #Features of our app
 -Login/Signup page
 -contains signin/signup form

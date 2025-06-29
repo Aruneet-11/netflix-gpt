@@ -32,3 +32,6 @@
 -NetflixGPT
 -searchbar
 -Suggest movies based on your search
+
+#Note
+instead of dispatching the action again and again on signup,signin and signout. We will write it only one time in the body.js using a function onAuthStateChanged.

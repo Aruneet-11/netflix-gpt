@@ -18,6 +18,19 @@
 16.Implemented signout
 17.Update profile api call
 18.Fetch data from TMDB movie.
+19.BugFix:signup user display name update.
+20.BugFix: if the user is not logged in redirect them to login page and vice-versa.
+21.unsubscribed to the onAuthState change callback when the componet unmounts.
+22.Registered on TMDB and created the app
+23.Get data from TMDB now playing movies list API.
+24.get the trailer data from videos api.
+25.created the custom hook for now playing Movies.
+26.created movie slice.
+27.updated the movie slice with movies data.
+28.upsated store with trailer video data.
+29.embedded the you tube video made it autoplay and mute.
+30.Added TailwindCss to make it look awesome. 31. Also added Font Awesome in the project for the icons.
+
 #Features of our app
 -Login/Signup page
 -contains signin/signup form
@@ -29,11 +42,12 @@
 -Title Desc
 -Play Button
 -Movie Suggestions
--Movie List \*n
+-Movie List
 
 -NetflixGPT
 -searchbar
 -Suggest movies based on your search
 
 #Note
-instead of dispatching the action again and again on signup,signin and signout. We will write it only one time in the body.js using a function onAuthStateChanged.
+-instead of dispatching the action again and again on signup,signin and signout. We will write it only one time in the body.js using a function onAuthStateChanged.
+-if I use strict mode a lot of things happen twice.

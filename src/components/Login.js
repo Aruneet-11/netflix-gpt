@@ -6,7 +6,7 @@ import {createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile
 import { auth } from '../utils/firebase'; 
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import {useNavigate } from 'react-router-dom'
+
 import bgImg from '../utils/images/netflix-bg.jpg'; 
 const Login = () => {
   const [isSignInForm,setSignInForm]=useState(true);
@@ -15,12 +15,9 @@ const Login = () => {
   const email=useRef(null);
   const password=useRef(null);
   const name=useRef(null);
-  const navigate=useNavigate();
+
   const handleButtonClick=()=>{ 
     //Validate the form data.
-    console.log(name?.current?.value);
-    console.log(email?.current?.value);
-    console.log(password?.current?.value);
     const msg=checkValidateData(name?.current?.value,email?.current?.value,password?.current?.value);
     setErrmsg(msg);
     //if this is valid then I can proceed with signin/signup.
@@ -37,13 +34,13 @@ const Login = () => {
           // Profile updated!
           const {uid,email,displayName} = auth.currentUser;
           dispatch(addUser({usid:uid,email:email,displayName:displayName}));
-          navigate('/browse');
+          
         }).catch((error) => {
           // An error occurred
           setErrmsg(error.message);
         });
         
-        console.log(user);
+       
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -57,8 +54,7 @@ const Login = () => {
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    navigate('/browse');
-    console.log(user);
+  
   
   })
   .catch((error) => {

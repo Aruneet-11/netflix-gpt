@@ -30,6 +30,7 @@
 28.upsated store with trailer video data.
 29.embedded the you tube video made it autoplay and mute.
 30.Added TailwindCss to make it look awesome. 31. Also added Font Awesome in the project for the icons.
+32.build the secondary component.
 
 #Features of our app
 -Login/Signup page

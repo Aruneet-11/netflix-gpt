@@ -6,7 +6,6 @@ import {createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile
 import { auth } from '../utils/firebase'; 
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-
 import bgImg from '../utils/images/netflix-bg.jpg'; 
 const Login = () => {
   const [isSignInForm,setSignInForm]=useState(true);

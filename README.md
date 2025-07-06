@@ -31,6 +31,11 @@
 29.embedded the you tube video made it autoplay and mute.
 30.Added TailwindCss to make it look awesome. 31. Also added Font Awesome in the project for the icons.
 32.build the secondary component.
+33.GPT search Feature.
+34.Created GptSearch bar and GptMoviesSuggestions.
+35.Created GptSearch Page.
+36.(\*\*\*) Multi Language feature in our app.
+37.Integrate GPT APIs.
 
 #Features of our app
 -Login/Signup page

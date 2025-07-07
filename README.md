@@ -36,6 +36,7 @@
 35.Created GptSearch Page.
 36.(\*\*\*) Multi Language feature in our app.
 37.Integrate GPT APIs.
+38.Build the GPT Suggestion Page.
 
 #Features of our app
 -Login/Signup page

@@ -6,7 +6,7 @@ import bgImg from '../utils/images/netflix-bg.jpg';
 const GptSearch = () => {
   return (
     <div>
-    <img  src={bgImg} alt="bg-img" className="absolute inset-0 w-full h-full object-cover -z-10"></img>
+    <img  src={bgImg} alt="bg-img" className="fixed inset-0 w-full h-full object-cover -z-10"></img>
     <GptSearchBar/>
     <GptMovieSuggestions/>
         {/*

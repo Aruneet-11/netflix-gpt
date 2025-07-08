@@ -59,3 +59,20 @@
 #Note
 -instead of dispatching the action again and again on signup,signin and signout. We will write it only one time in the body.js using a function onAuthStateChanged.
 -if I use strict mode a lot of things happen twice.
+
+
+
+#Output
+
+![Screenshot 2025-07-08 193835](https://github.com/user-attachments/assets/5274956b-e6fc-4c77-a4b7-732b8a211a1a)
+![Screenshot 2025-07-08 194012](https://github.com/user-attachments/assets/767e5e2f-0d0d-49dc-9f65-647a32e70898)
+
+Home Page
+
+![Screenshot 2025-07-08 194121](https://github.com/user-attachments/assets/c7e7a3c9-ec00-4181-9a07-444a165efd8b)
+![Screenshot 2025-07-08 194307](https://github.com/user-attachments/assets/f9b8abd9-7be8-45cf-9a91-2eb7f2b0f2db)
+
+
+![Screenshot 2025-07-08 194357](https://github.com/user-attachments/assets/611020c4-fc0f-449c-a8d6-e6d590f83d7b)
+
+![Screenshot 2025-07-08 194518](https://github.com/user-attachments/assets/0e96c66e-a81e-47c0-bf41-1650446d047b)

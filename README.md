@@ -37,6 +37,7 @@
 36.(\*\*\*) Multi Language feature in our app.
 37.Integrate GPT APIs.
 38.Build the GPT Suggestion Page.
+39.Making the app responsive.
 
 #Features of our app
 -Login/Signup page
